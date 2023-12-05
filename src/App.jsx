@@ -4,7 +4,8 @@ import { UserAuth } from "./context/UserAuth"
 const router = createBrowserRouter(routes)
 import { useState } from "react"
 import "./style/css/main.css"
-
+import store from './redux/store/store'
+import { Provider } from "react-redux"
 
 function App() {
   
@@ -12,9 +13,13 @@ function App() {
 
   return (
     <>
+    <Provider store={store}>
     <UserAuth.Provider value={{isLogin, setIsLogin}}>
     <RouterProvider router={router}/>
-  </UserAuth.Provider></>
+  </UserAuth.Provider>
+  </Provider>
+  {/* document.getElementById('root') */}
+  </>
   )
 }
 

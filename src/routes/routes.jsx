@@ -11,6 +11,9 @@ import AdminRoot from "../pages/admin/AdminRoot";
 import Adress from "../pages/user/Adress";
 import AboutMeals from "../pages/user/AboutMeals";
 import Cart from "../pages/user/Cart";
+import Wishlist from "../pages/user/Wishlist";
+import Users from "../pages/admin/Users";
+
 const routes = [
   {
     path: "/",
@@ -47,6 +50,10 @@ const routes = [
       {
         path: "/cart",
         element: <Cart />,
+      },
+      {
+        path: "/wishlist",
+        element: <Wishlist />,
       }
     ],
   },
@@ -63,6 +70,10 @@ const routes = [
       {
         path:"/admin/mealspageforadmin",
         element:<MealsPageForAdmin/>,
+      },
+      {
+        path:"/admin/user",
+        element:<Users/>,
       }
     ],
   },

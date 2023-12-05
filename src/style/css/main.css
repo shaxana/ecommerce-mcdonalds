@@ -55,6 +55,11 @@ Container {
   margin: 0 auto;
 }
 
+.cartButton {
+  margin-left: 300px;
+  background-color: yellow;
+}
+
 .card {
   text-decoration: none;
   color: inherit;
@@ -63,4 +68,13 @@ Container {
   height: 400px;
   font-size: 16px;
   overflow: hidden;
+}
+
+.buttoncart {
+  background-color: "gold";
+  padding: 10;
+  width: 100;
+  border: "none";
+  border-radius: 8;
+  margin-left: 200;
 }/*# sourceMappingURL=main.css.map */

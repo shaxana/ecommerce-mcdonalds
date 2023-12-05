@@ -16,6 +16,9 @@ import { Formik, Form, Field} from "formik";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { loginSuccess, logout } from "../../redux/slices/loginSlice";
+import { useSelector } from "react-redux";
 function Copyright(props) {
   return (
     <Typography
@@ -37,9 +40,11 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 function Login() {
-  // const [a, b, isLogin, setIsLogin] = useContext(UserAuth);
-  let [isLogin, setIsLogin] = useState([])
+
   let navigate = useNavigate()
+  const dispatch = useDispatch()
+  const currentUser = useSelector((state)=> state.login.currentUser);
+  const isLogin = useSelector((state) => state.login.isLogin);
 
 
   return (
@@ -79,58 +84,7 @@ function Login() {
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
-            {/* <Box
-              component="form"
-              noValidate
-              onSubmit={handleSubmit}
-              sx={{ mt: 1 }}
-            >
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                id="email"
-                label="Email Address"
-                name="email"
-                autoComplete="email"
-                autoFocus
-              />
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                name="password"
-                label="Password"
-                type="password"
-                id="password"
-                autoComplete="current-password"
-              />
-              <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
-              />
-              <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                sx={{ mt: 3, mb: 2 }}
-              >
-                Sign In
-              </Button>
-              <Grid container>
-                <Grid item xs>
-                  <Link href="#" variant="body2">
-                    Forgot password?
-                  </Link>
-                </Grid>
-                <Grid item>
-                  <Link href="#" variant="body2">
-                    {"Don't have an account? Sign Up"}
-                  </Link>
-                </Grid>
-              </Grid>
-              <Copyright sx={{ mt: 5 }} />
-            </Box> */}
+            
             <Box>
               <Formik initialValues={{
                 name:"",
@@ -140,7 +94,7 @@ function Login() {
                   let users = res.data;
                   let check = users.find((user)=> user.name == values.name && user.password == values.password)
                   if (check){
-                    setIsLogin(check);
+                    dispatch(loginSuccess(check));
                     console.log(isLogin);
                     navigate("/")
                   }

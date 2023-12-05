@@ -396,10 +396,10 @@
     {
       "name": "Ayan",
       "password": "123",
-      "agreement":true,
+      "agreement": true,
       "Basket": [],
       "wishlist": [],
-      "balance":100,
+      "balance": 100,
       "IsAdmin": true,
       "id": "1"
     },
@@ -408,7 +408,7 @@
       "password": "123",
       "Basket": [],
       "wishlist": [],
-      "balance":100,
+      "balance": 100,
       "IsAdmin": true,
       "id": "2"
     },
@@ -417,7 +417,7 @@
       "password": "123",
       "Basket": [],
       "wishlist": [],
-      "balance":100,
+      "balance": 100,
       "IsAdmin": true,
       "id": "3"
     },
@@ -426,7 +426,7 @@
       "password": "password 4",
       "Basket": [],
       "wishlist": [],
-      "balance":100,
+      "balance": 100,
       "IsAdmin": false,
       "id": "4"
     },
@@ -435,7 +435,7 @@
       "password": "password 5",
       "Basket": [],
       "wishlist": [],
-      "balance":100,
+      "balance": 100,
       "IsAdmin": false,
       "id": "5"
     },
@@ -444,7 +444,7 @@
       "password": "password 6",
       "Basket": [],
       "wishlist": [],
-      "balance":100,
+      "balance": 100,
       "IsAdmin": false,
       "id": "6"
     },
@@ -453,7 +453,7 @@
       "password": "password 7",
       "Basket": [],
       "wishlist": [],
-      "balance":100,
+      "balance": 100,
       "IsAdmin": false,
       "id": "7"
     },
@@ -462,7 +462,7 @@
       "password": "password 8",
       "Basket": [],
       "wishlist": [],
-      "balance":100,
+      "balance": 100,
       "IsAdmin": false,
       "id": "8"
     },
@@ -471,15 +471,15 @@
       "password": "password 9",
       "Basket": [],
       "wishlist": [],
-      "balance":100,
+      "balance": 100,
       "IsAdmin": false,
       "id": "9"
     },
     {
       "name": "name 10",
       "password": "password 10",
-      "balance":100,
-      "agreement":true,
+      "balance": 100,
+      "agreement": true,
       "Basket": [],
       "wishlist": [],
       "IsAdmin": false,
@@ -504,6 +504,16 @@
       "basket": [],
       "wishlist": [],
       "id": "m83uBxj"
+    },
+    {
+      "name": "Aysel",
+      "password": "aysel",
+      "balance": "200",
+      "agreement": true,
+      "isAdmin": false,
+      "basket": [],
+      "wishlist": [],
+      "id": "4b2w0aO"
     }
   ]
 }
