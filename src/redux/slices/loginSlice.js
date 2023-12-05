@@ -30,7 +30,7 @@ const loginSlice = createSlice({
         cart.count +=1
       }
       else{
-        state.cart.push({...newItem, count:1})
+        state.cart.push(action.payload)
       }
     },
     removeFromCart: (state,action) => {

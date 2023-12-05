@@ -72,7 +72,7 @@ const routes = [
         element:<MealsPageForAdmin/>,
       },
       {
-        path:"/admin/user",
+        path:"/admin/users",
         element:<Users/>,
       }
     ],

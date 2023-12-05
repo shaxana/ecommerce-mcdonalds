@@ -57,8 +57,8 @@ function Register() {
   return (
     <div
       style={{
-        background:
-          "url(https://eu-assets.simpleview-europe.com/stokebid/imageresizer/?image=%2Fdmsimgs%2FMCDONALDS_14_128333773.jpg&action=ProductDetailProFullWidth)",
+        // background:
+        //   "url(https://eu-assets.simpleview-europe.com/stokebid/imageresizer/?image=%2Fdmsimgs%2FMCDONALDS_14_128333773.jpg&action=ProductDetailProFullWidth)",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -94,6 +94,7 @@ function Register() {
               <Box>
                 <Formik
                   initialValues={{
+                    id:"",
                     name: "",
                     password: "",
                     balance: "",

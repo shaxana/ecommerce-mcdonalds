@@ -37,7 +37,7 @@ function Navbar() {
                 </div>
                 <div className="karier-div">
                   <Button>
-                    <Link>Kariyera</Link>
+                    <Link>Karyera</Link>
                   </Button>
                 </div>
               </div>
@@ -53,7 +53,7 @@ function Navbar() {
                 </Button>
               </div>
             </div>
-            <button className="header-btn">Indi sifariş edin</button>
+            <button className="header-btn">İndi sifariş edin</button>
           </div>
           <div className="profile">
             <div className="user">

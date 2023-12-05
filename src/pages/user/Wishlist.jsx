@@ -6,7 +6,7 @@ import Grid from "@mui/system/Unstable_Grid/Grid";
 import { Card, CardMedia, CardContent, Typography, CardActions, } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
-import { addToFavorite } from "../../redux/slices/loginSlice";
+import { addToCart, addToFavorite } from "../../redux/slices/loginSlice";
 import { useDispatch, useSelector } from "react-redux";
 const Wishlist = () => {
   const dispatch = useDispatch()
@@ -57,7 +57,9 @@ const Wishlist = () => {
         <button style={{backgroundColor:'gold', padding:10, width:120, border:"none", borderRadius:8 , marginLeft:200, marginBottom:20 }}
                   variant="danger"
                   className="m-2"
-                  // onClick={() => emptyCart()}
+                  onClick={()=>{
+                    dispatch(addToCart(favItem))
+                  }}
                 >
                   <BsCartX size="1.7rem" />
                   Add to Cart

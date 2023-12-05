@@ -4,8 +4,9 @@ import { useCart } from "react-use-cart";
 import { BsCartCheck, BsCartX } from "react-icons/bs";
 import Grid from "@mui/system/Unstable_Grid/Grid";
 import { Card, CardMedia, CardContent, Typography, CardActions, } from "@mui/material";
-import { left } from "@popperjs/core";
+// import { left } from "@popperjs/core";
 import { useDispatch, useSelector } from "react-redux";
+import { addToCart, removeFromCart } from "../../redux/slices/loginSlice";
 
 const Cart = () => {
   const {
@@ -18,7 +19,9 @@ const Cart = () => {
   } = useCart();
 
   const dispatch = useDispatch()
-  const cartItems = useSelector((state)=> state.cart.items)
+  const cartItems = useSelector((state)=>{
+     return state.login.cart;
+    })
 
   return (
 
@@ -35,20 +38,23 @@ return <Grid item xs={4}>
 <Card sx={{ maxWidth: 345 }} style={{marginLeft:50}}>
     <CardMedia
       sx={{ height: 140 }}
-      image="https://mcdonalds.az/images/d8435c28c90f173578fe8be07fc3f8f1.png"
+      image={cartItem.image}
       title="green iguana"
       style={{width:200, margin:"0 auto"}}
     />
     <CardContent>
       <Typography gutterBottom variant="h5" component="div">
-        meals name
+        {cartItem.name}
       </Typography>
       <Typography variant="body2" color="text.secondary" style={{marginLeft:110}}>
-        meals description
+      {cartItem.description}
+      </Typography>
+      <Typography variant="body2" color="text.secondary" style={{marginLeft:110}}>
+     Count: {cartItem.count}
       </Typography>
     </CardContent>
     <CardActions>
-      <button style={{backgroundColor:'gold', padding:10, width:100, border:"none", borderRadius:8 , marginLeft:200 }} size="small"> Delete</button>
+      <button style={{backgroundColor:'gold', padding:10, width:100, border:"none", borderRadius:8 , marginLeft:200}} size="small"> Delete</button>
         </CardActions>
   </Card>
 </Grid>
@@ -75,10 +81,7 @@ return <Grid item xs={4}>
                 <BsCartX size="1.7rem" />
                 Clear Cart
               </button>
-              <button variant="success" className="m-2" style={{backgroundColor:'gold', padding:10, width:150, border:"none", borderRadius:8 , marginLeft:200 }}>
-                <BsCartCheck size="1.7rem" />
-                Clear Cart
-              </button>
+             
             </div></div>
           </Row>
         {/* )} */}

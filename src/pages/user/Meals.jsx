@@ -35,8 +35,9 @@ function Meals() {
                   className="sevimlimg"
                   src="https://mcdonalds.az/images/static/full_menu.jpg"
                   alt=""
+                  style={{width:'100px'}}
                 />
-                <h6>Müştəri sevimliləri</h6>
+                <h4 style={{marginTop:"40px", marginLeft:"20px"}}>Müştəri sevimliləri</h4>
               </div>
               <div className="meals">
                 <div className="sortdiv">
@@ -140,12 +141,12 @@ function Meals() {
                           className="meal-image"
                         />
                         <p className="mealname">{meal.name}</p>
-                        <Button className="cartButton" onClick={(e)=> {
+                       
+                      </Link>
+                      <Button className="cartButton" onClick={(e)=> {
                           e.stopPropagation()
                           dispatch(addToCart(meal))
                         }}>Add to Cart</Button>
-                      </Link>
-                    
                       <FontAwesomeIcon
                         icon={favItems.find(favItem => favItem.id === meal.id) ? solidHeart : regularHeart}
                         style={{ position: 'absolute', top: 10, right: 10, color: 'red', cursor:'pointer' }}
